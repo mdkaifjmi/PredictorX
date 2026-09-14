@@ -120,7 +120,7 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/auth/login")
 app = FastAPI(title="PredictorX API", version="4.0.0")
 app.add_middleware(
     CORSMiddleware,
-    allow_origin_regex=r"^http://(localhost|127\.0\.0\.1):\d+$",
+    allow_origin_regex=r"^(https://predictor-x-frontend\.vercel\.app|http://(localhost|127\.0\.0\.1):\d+)$",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
